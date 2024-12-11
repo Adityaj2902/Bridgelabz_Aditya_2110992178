@@ -1,5 +1,8 @@
 Date-9/12/2024
 
+<h2>Types of Branches</h2>
+
+
 Initiated new github repository -> BridgeLabz_Aditya_2110992178
 Added README.md file
 
