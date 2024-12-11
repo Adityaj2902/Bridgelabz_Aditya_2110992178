@@ -5,12 +5,12 @@ Added README.md file
 
 Date - 10/12/2024
 
-->Git Pull
-->Git Push
-->Git Fetch
-->Difference Between PULL && FETCH
-->Resolving Merge Conflicts
-->Stashing
-->
+->Git Pull<br />
+->Git Push<br />
+->Git Fetch<br />
+->Difference Between PULL && FETCH<br />
+->Resolving Merge Conflicts<br />
+->Stashing<br />
+
 
 
