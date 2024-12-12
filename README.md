@@ -16,4 +16,16 @@ Date - 10/12/2024
 ->Stashing<br />
 
 
+Date - 11/12/2024
+
+->create and handle pull request
+->git rebase
+->orphan branch
+
+Date-12/12/2024
+
+->Dom Manipulation Revision
+->One Mini Project for Dom Manipulation "Guess My Number"
+
+
 
