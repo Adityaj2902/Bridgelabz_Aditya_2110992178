@@ -1,31 +1,46 @@
 Date-9/12/2024
 
-<h2>Types of Branches</h2>
+<strong>Types of Branches<strong>
 
 
-Initiated new github repository -> BridgeLabz_Aditya_2110992178
-Added README.md file
+<li>Initiated new github repository -> BridgeLabz_Aditya_2110992178</li></br>
+<li>Added README.md file</li>
+</br>
 
-Date - 10/12/2024
+Date - 10/12/2024</br>
+</br>
+<strong>Git Commands</strong>
 
-->Git Pull<br />
-->Git Push<br />
-->Git Fetch<br />
-->Difference Between PULL && FETCH<br />
-->Resolving Merge Conflicts<br />
-->Stashing<br />
+<li>Git Pull</li><br/>
+<li>Git Push </li><br />
+<li>Git Fetch</li><br />
+<li>Difference Between PULL && FETCH</li><br />
+<li>Resolving Merge Conflicts</li><br />
+<li>Stashing</li><br />
 
 
 Date - 11/12/2024
-
-->create and handle pull request
-->git rebase
-->orphan branch
+<li>create and handle pull request</li>
+<li>git rebase</li>
+<li>orphan branch</li>
+</br>
 
 Date-12/12/2024
 
-->Dom Manipulation Revision<br/>
-->One Mini Project for Dom Manipulation "Guess My Number"
+<li>Dom Manipulation Revision</li><br/>
+<li>One Mini Project for Dom Manipulation "Guess My Number"</li></br>
+
+Date-13/12/2024 </br>
+</br>
+<strong>Array Methods</strong>
+</br>
+<li>Slice Method</li>
+<li>Concat Methods</li>
+<li>Splice Methods</li>
+<li>Join Methods</li>
+<li>For Of Methods</li>
+<li>ForEach Method</li>
+
 
 
 
