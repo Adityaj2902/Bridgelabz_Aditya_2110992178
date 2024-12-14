@@ -83,4 +83,4 @@ Movements.forEach(function(movement,index,array){
 
 // Notes : You cannot be able to break the iteration in between because continue and break will not be accepted here 
 
-// Notes: 
+// Notes: In For Of Method You can use that
