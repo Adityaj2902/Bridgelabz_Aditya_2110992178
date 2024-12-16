@@ -42,5 +42,22 @@ Date-13/12/2024 </br>
 <li>ForEach Method</li>
 
 
+Date-14/12/2024
+<strong>Array Methods<strong>
+<li>Filter Method</li>
+<li>Reduce Method</li>
+<li>Map Method</li>
+
+Date=-16/12/2024
+<strong>Array Methods<strong>
+<li>The Find Method</li>
+<li>The Last Find Method </li>
+<li>The Index Method</li>
+<li>The LastIndex Method</li>
+<li>The Chaining Methods</li>
+<li>Question Challenge</li>
+
+
+
 
 
