@@ -12,3 +12,19 @@
 // filter : arr[i]>2;
 
 // newarr=[3,4,3];
+
+let movements=[200,400,-500,800,-555,1000];
+
+// const onlyDeposits=movements.filter(function(mov){
+//     return mov>0;
+// });
+
+// console.log(onlyDeposits);
+
+// Now write it in a more cleaner way 
+
+const onlyDeposits=movements.filter((mov)=>mov>0);
+console.log(onlyDeposits);
+
+
+
