@@ -55,7 +55,7 @@ Date-16/12/2024</br>
 </br>
 <strong>Array Methods<strong>
 <li>The Find Method</li>
-<li>The Last Find Method </li>
+<li>The FindLast Method </li>
 <li>The Find Index Method</li>
 <li>The FindLastIndex Method</li>
 <li>The Chaining Methods</li>
