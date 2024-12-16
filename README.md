@@ -40,20 +40,24 @@ Date-13/12/2024 </br>
 <li>Join Methods</li>
 <li>For Of Methods</li>
 <li>ForEach Method</li>
+</br>
 
 
-Date-14/12/2024
+Date-14/12/2024</br>
+</br>
 <strong>Array Methods<strong>
 <li>Filter Method</li>
 <li>Reduce Method</li>
 <li>Map Method</li>
+</br>
 
-Date=-16/12/2024
+Date-16/12/2024</br>
+</br>
 <strong>Array Methods<strong>
 <li>The Find Method</li>
 <li>The Last Find Method </li>
-<li>The Index Method</li>
-<li>The LastIndex Method</li>
+<li>The Find Index Method</li>
+<li>The FindLastIndex Method</li>
 <li>The Chaining Methods</li>
 <li>Question Challenge</li>
 
