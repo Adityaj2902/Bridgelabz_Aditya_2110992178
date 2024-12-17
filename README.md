@@ -60,6 +60,20 @@ Date-16/12/2024</br>
 <li>The FindLastIndex Method</li>
 <li>The Chaining Methods</li>
 <li>Question Challenge</li>
+</br>
+
+Date-17/12/2024
+</br>
+</br>
+<strong>Array Methods<strong>
+</br>
+<li>Include Method</li>
+<li>ArrayGrouping</li>
+<li>Flat</li>
+<li>FlatMap</li>
+<li>Array-Grouping</li>
+<li>Sorting Arrays</li>
+</br>
 
 
 
