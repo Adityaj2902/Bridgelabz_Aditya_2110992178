@@ -77,5 +77,19 @@ Date-17/12/2024
 
 
 
+Date-18/12/2024
+</br>
+</br>
+<strong>Destructuring<strong>
+</br>
+<li>Object Destructring</li>
+<li>Array Destructuring</li>
+</br>
+
+
+
+
+
+
 
 
