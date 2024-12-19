@@ -9,6 +9,8 @@ const restaurant = {
     }
 };
 
+// We use "[]" Square Bracket For Destructuring the Arrays  
+
 // Resturant is an object and there is array inside it
 
 // way of unpacking the values from the array into separate varaibels 
@@ -77,8 +79,24 @@ console.log(starterMenuItem,mainMenuItem);
 // This is How we are able to destructure the array even after getting the value from object based on our input Index ;
 
 
- 
+// --------------------Nested Destucturing -----------------
+
+//  how to nest array one into other 
+
+const nested=[2,4,[5,6]];
+console.log(nested);
+
+const [element1,,element2]=nested;
+console.log(element1," ",element2);
 
 
+// but if we want to get every single element from this array destructuring inside destructuring;
 
+const [elementone,,[elementtwo,elementthree]]=nested;
+console.log(elementone,elementtwo,elementthree);
 
+// Default Values
+
+const [p=1,q=1,r=1]=[8,9];
+
+console.log(p,q,r);
