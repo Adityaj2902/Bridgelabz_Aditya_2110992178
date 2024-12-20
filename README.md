@@ -3,7 +3,7 @@ Date-9/12/2024
 <strong>Types of Branches<strong>
 
 
-<li>Initiated new github repository -> BridgeLabz_Aditya_2110992178</li></br>
+<li>Initiated new github repository -> BridgeLabz_Aditya_2110992178</li>
 <li>Added README.md file</li>
 </br>
 
@@ -11,11 +11,11 @@ Date - 10/12/2024</br>
 </br>
 <strong>Git Commands</strong>
 
-<li>Git Pull</li><br/>
-<li>Git Push </li><br />
-<li>Git Fetch</li><br />
-<li>Difference Between PULL && FETCH</li><br />
-<li>Resolving Merge Conflicts</li><br />
+<li>Git Pull</li>
+<li>Git Push </li>
+<li>Git Fetch</li>
+<li>Difference Between PULL && FETCH</li>
+<li>Resolving Merge Conflicts</li>
 <li>Stashing</li><br />
 
 
@@ -27,7 +27,7 @@ Date - 11/12/2024
 
 Date-12/12/2024
 
-<li>Dom Manipulation Revision</li><br/>
+<li>Dom Manipulation Revision</li>
 <li>One Mini Project for Dom Manipulation "Guess My Number"</li></br>
 
 Date-13/12/2024 </br>
@@ -85,6 +85,25 @@ Date-18/12/2024
 <li>Object Destructring</li>
 <li>Array Destructuring</li>
 </br>
+
+
+Date-19/12/2024
+</br>
+<li>Spread-Operator</li>
+<li>Rest-Operator</li>
+</br>
+
+
+
+Date-20/12/2024
+</br>
+<li>Logical Assignment Operators </li>
+<li>Nullish Coalescing Opertors </li>
+<li>Optional Chaining </li>
+<li>Short Circuiting </li>
+
+</br>
+
 
 
 
