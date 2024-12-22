@@ -42,12 +42,64 @@ const restaurant = {
   
     orderPasta:function(ingredient1,ingredient2,ingredient3){
     console.log(`Here is Your Delicious Pasta with ${ingredient1}, ${ingredient2} and ${ingredient3}`)
+    },
+
+    orderPizza:function(mainIngredients,otherIngredients){
+        console.log()
     }
   };
 
+  // REST OPERATOR USED TO COLLECT MULTIPLE ELEMENT CONDENSE THEM INTO AN ARRAY 
 
-  // SPREAD OPERATOR BECAUSE ON THE RIGHT SIDE OF THE ASSIGNMENT OPERATOR 
+  // SPREAD OPERATOR BECAUSE ON THE RIGHT SIDE OF THE ASSIGNMENT OPERATOR =
 
-  const arr=[1,2,...[3,4]];
+//   const arr=[1,2,...[3,4]];
 
-  console.log(arr);
+//   console.log(arr);
+
+  // REST , BECAUSE ON THE LEFT SIDE OF =
+  
+//   const [a,b,...others]=[1,2,3,4,5];
+
+//   console.log(a,b,others);
+
+//   Now combine the both the use of spread opertaor and rest operator 
+
+// const [Pizza, , Risotto,...otherFoods]=[...restaurant.mainMenu,restaurant.starterMenu];
+
+// console.log('\n');
+
+// console.log(Pizza,Risotto,otherFoods);
+
+// REST OPERATOR ALWAYS MUST BE THE LAST IN DESTRUCTRING ASSIGNMENT BECAUSE OTHERWISE HOW WOULD JAVASCRIPT WOULD KNOW UNTIL WHEN IT SHOULD COLLECT THE REST OF THE ARRAY 
+// THERE CAN ONLY EVER BE ONE REST OPERATOR IN ANY DESTRUCTURING ASSIGNMENT 
+
+// IT ALSO WORKS IN INDEED ON OBJECTS 
+
+// const {sat,...weekdays}=restaurant.openingHours;
+
+// console.log(weekdays);
+
+
+const add = function (...numbers){   //Here it is being collected by rest operator
+
+    const sum=numbers.reduce((accu,curr)=>accu+curr,0);
+
+    console.log(sum);
+}
+
+
+// add(5,2);
+// add(4,6,7,8,9);
+// add(2,3,5,7,9,8);
+
+// Then Why we Are Not simple creating the function why we are using this gor creating addition 
+// Answer: With the help of this by passing one argument only we are able tp pass single value as well as array 
+
+
+const number=[1,2,3,4,5,6];
+
+console.log(...number);// Here we are Spreading the number with the help of spread operator
+
+// when same thing is passing into function then it will be immediatley be colleted by rest operator  Refernce will be line no 
+ 
