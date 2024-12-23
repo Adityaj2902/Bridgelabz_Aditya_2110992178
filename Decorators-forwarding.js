@@ -1,0 +1,2 @@
+// Decorators are used to enhance or modify the behavior of functions or classes, often in a reusable way.
+// Forwarding involves passing arguments from one function to another, allowing for additional processing or behavior to be added without modifying the original function directly.
