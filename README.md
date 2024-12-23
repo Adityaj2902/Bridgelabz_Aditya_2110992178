@@ -113,6 +113,18 @@ Date-21/12/2024
 </br>
 
 
+Date-23/12/2024
+</br>
+<li>Call , Apply & Bind Method </li>
+<li>IIFE</li>
+<li>NFE</li>
+<li>Polyfills</li>
+<li>Transpillers</li>
+<li>Schedulling</li>
+
+</br>
+
+
 
 
 
