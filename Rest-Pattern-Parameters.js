@@ -44,8 +44,9 @@ const restaurant = {
     console.log(`Here is Your Delicious Pasta with ${ingredient1}, ${ingredient2} and ${ingredient3}`)
     },
 
-    orderPizza:function(mainIngredients,otherIngredients){
-        console.log()
+    orderPizza:function(mainIngredients,...otherIngredients){
+        console.log(mainIngredients);
+        console.log(otherIngredients);
     }
   };
 
@@ -53,9 +54,9 @@ const restaurant = {
 
   // SPREAD OPERATOR BECAUSE ON THE RIGHT SIDE OF THE ASSIGNMENT OPERATOR =
 
-//   const arr=[1,2,...[3,4]];
+  // const arr=[1,2,...[3,4]];
 
-//   console.log(arr);
+  // console.log(arr);
 
   // REST , BECAUSE ON THE LEFT SIDE OF =
   
@@ -72,7 +73,9 @@ const restaurant = {
 // console.log(Pizza,Risotto,otherFoods);
 
 // REST OPERATOR ALWAYS MUST BE THE LAST IN DESTRUCTRING ASSIGNMENT BECAUSE OTHERWISE HOW WOULD JAVASCRIPT WOULD KNOW UNTIL WHEN IT SHOULD COLLECT THE REST OF THE ARRAY 
+
 // THERE CAN ONLY EVER BE ONE REST OPERATOR IN ANY DESTRUCTURING ASSIGNMENT 
+
 
 // IT ALSO WORKS IN INDEED ON OBJECTS 
 
@@ -81,25 +84,30 @@ const restaurant = {
 // console.log(weekdays);
 
 
-const add = function (...numbers){   //Here it is being collected by rest operator
+// const add = function (...numbers){   //Here it is being collected by rest operator
 
-    const sum=numbers.reduce((accu,curr)=>accu+curr,0);
+//     const sum=numbers.reduce((accu,curr)=>accu+curr,0);
+//     console.log(sum);
 
-    console.log(sum);
-}
+// }
 
+// let numbers=[2,4,6,8,10];
 
 // add(5,2);
 // add(4,6,7,8,9);
 // add(2,3,5,7,9,8);
 
-// Then Why we Are Not simple creating the function why we are using this gor creating addition 
+// console.log(add(...numbers));
+
+// Then Why we Are Not simple creating the function why we are using this for spread and rest operator
 // Answer: With the help of this by passing one argument only we are able tp pass single value as well as array 
 
 
-const number=[1,2,3,4,5,6];
+// const number=[1,2,3,4,5,6];
 
-console.log(...number);// Here we are Spreading the number with the help of spread operator
+// console.log(...number);// Here we are Spreading the number with the help of spread operator
 
 // when same thing is passing into function then it will be immediatley be colleted by rest operator  Refernce will be line no 
  
+
+restaurant.orderPizza('Mushrooms','Onion','Olives','Spinach');
