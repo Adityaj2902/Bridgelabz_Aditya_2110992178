@@ -124,6 +124,15 @@ Date-23/12/2024
 
 </br>
 
+Date-24/12/2024
+</br>
+<li>OOPS</li>
+<li>Arrays Practice</li>
+<li>Linked List Practice</li>
+
+</br>
+
+
 
 
 
