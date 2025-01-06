@@ -134,6 +134,29 @@ Date-24/12/2024
 
 
 
+Date-26/12/2024
+</br>
+<li>Array Implementation </li>
+<li>Stack Implementation  </li>
+<li>Queue Implementation  </li>
+<li>Hash Table Implementation  </li>
+</br>
+
+
+Date-06/01/2025
+</br>
+<li>Learn About Solids</li>
+<li>S -> Single Responsbility</li>
+<li>O -> Open / Close </li>
+<li>L -> Liskov Substitution</li>
+<li>I -> Interface Segregation</li>
+<li>D -> Dependency Inversion</li>
+</br>
+<li> DRY (Don't Repeat Yourself ) </li>
+<br>
+<li>YAGNI (You Aren't Gonna Need It)</li>
+
+</br>
 
 
 
