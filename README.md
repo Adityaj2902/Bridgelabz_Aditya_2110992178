@@ -143,7 +143,7 @@ Date-26/12/2024
 </br>
 
 
-Date-06/01/2025
+Date-27/12/2025
 </br>
 <li>Learn About Solids</li>
 <li>S -> Single Responsbility</li>
@@ -156,6 +156,19 @@ Date-06/01/2025
 <br>
 <li>YAGNI (You Aren't Gonna Need It)</li>
 
+</br>
+
+Date-06/01/2025
+</br>
+<li> Asynchronus Javascript </li>
+<li> Ajax calls </li>
+<li>How to call Any Api </li>
+<li> Callback Hell  </li>
+<li>Promises</li>
+<li>Chaining Promises</li>
+<li>Handling Promises</li>
+<li>Throwing Error Manually</li>
+<li>Promosification </li>
 </br>
 
 
