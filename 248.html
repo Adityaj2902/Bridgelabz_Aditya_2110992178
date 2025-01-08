@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AJAX and API Calls</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		h1, h2, h3 {
+			color: #333;
+		}
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		li {
+			margin-bottom: 10px;
+		}
+	</style>
+</head>
+<body>
+	<h1>AJAX and API Calls</h1>
+
+	<h2>XML HTTP Request</h2>
+	<p>In JavaScript, there are multiple ways of doing AJAX calls. We're going to start with the most old school one, which is called the XML HTTP request function.</p>
+	<pre>
+		var request = new XMLHttpRequest();
+	</pre>
+
+	<h2>Opening the Request</h2>
+	<p>We need to open the request and specify the type of request (GET, POST, etc.) and the URL to which the request should be made.</p>
+	<pre>
+		request.open('GET', 'https://restcountries.eu/rest/v2/name/portugal');
+	</pre>
+
+	<h2>Sending the Request</h2>
+	<p>We need to send the request using the `send()` method.</p>
+	<pre>
+		request.send();
+	</pre>
+
+	<h2>Registering a Callback Function</h2>
+	<p>We need to register a callback function to handle the response from the API.</p>
+	<pre>
+		request.addEventListener('load', function() {
+			var data = JSON.parse(this.responseText);
+			// Do something with the data
+		});
+	</pre>
+
+	<h2>API Endpoint</h2>
+	<p>We're using the Rest Countries API, which provides information about countries.</p>
+	<pre>
+		https://restcountries.eu/rest/v2/name/portugal
+	</pre>
+
+	<h2>Converting JSON to a JavaScript Object</h2>
+	<p>We need to convert the JSON response to a JavaScript object using `JSON.parse()`.</p>
+	<pre>
+		var data = JSON.parse(this.responseText);
+	</pre>
+
+	<h2>Building the Card Component</h2>
+	<p>We're going to build a card component using the data from the API.</p>
+	<pre>
+		const html = `
+			<img src="${data.flag}" alt="Flag of ${data.name}">
+			<h2>${data.name}</h2>
+			<p>Region: ${data.region}</p>
+			<p>Population: ${data.population.toLocaleString()}</p>
+			<p>Language: ${data.languages[0].name}</p>
+			<p>Currency: ${data.currencies[0].name}</p
