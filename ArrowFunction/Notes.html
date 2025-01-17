@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function vs Regular Function</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            text-align: center;
+            color: #4A90E2;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #E94E77;
+            font-size: 1.5rem;
+        }
+        pre {
+            background-color: #2e3b4e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-top: 10px;
+        }
+        .code-container {
+            padding: 10px 0;
+            background-color: #f9f9f9;
+            border-left: 4px solid #4A90E2;
+        }
+        .code-container p {
+            color: #555;
+            font-size: 1rem;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .comparison-table th {
+            background-color: #E94E77;
+            color: white;
+        }
+        .comparison-table td {
+            background-color: #fafafa;
+        }
+        .note {
+            font-size: 1rem;
+            color: #999;
+            margin-top: 15px;
+        }
+        .highlight {
+            color: #4A90E2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Arrow Function vs Regular Function</h1>
+        
+        <div class="section">
+            <h2>1. Syntax</h2>
+            <div class="code-container">
+                <p><strong>Arrow Function:</strong></p>
+                <pre>const myFunction = (param1, param2) => {
+    return param1 + param2;
+};</pre>
+
+                <p><strong>Regular Function:</strong></p>
+                <pre>function myFunction(param1, param2) {
+    return param1 + param2;
+}</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. <span class="highlight">`this` Binding</span></h2>
+            <p>The <strong>arrow function</strong> inherits `this` from the surrounding lexical scope, while the <strong>regular function</strong> has its own `this` value.</p>
+            <div class="code-container">
+                <p><strong>Arrow Function Example:</strong></p>
+                <pre>const obj = {
+    value: 42,
+    arrowFunction: () => {
+        console.log(this.value);  // 'this' refers to global scope, not 'obj'
+    }
+};
+obj.arrowFunction();</pre>
+
+                <p><strong>Regular Function Example:</strong></p>
+                <pre>const obj = {
+    value: 42,
+    regularFunction: function() {
+        console.log(this.value);  // 'this' refers to 'obj'
+    }
+};
+obj.regularFunction();</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. <span class="highlight">`arguments` Object</span></h2>
+            <p>The <strong>arrow function</strong> does not have its own `arguments` object, but it can inherit from its enclosing scope. The <strong>regular function</strong> has its own `arguments` object.</p>
+            <div class="code-container">
+                <p><strong>Arrow Function Example:</strong></p>
+                <pre>const arrowFunc = () => {
+    console.log(arguments);  // Will refer to outer scope's arguments
+};
+arrowFunc(1, 2, 3);</pre>
+
+                <p><strong>Regular Function Example:</strong></p>
+                <pre>function regularFunc() {
+    console.log(arguments);  // [1, 2, 3]
+}
+regularFunc(1, 2, 3);</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>4. <span class="highlight">Constructor Behavior</span></h2>
+            <p>Arrow functions <strong>cannot be used as constructors</strong> because they do not have a `[[Construct]]` method, while regular functions can be invoked with the `new` keyword.</p>
+            <div class="code-container">
+                <p><strong>Arrow Function Example:</strong></p>
+                <pre>const ArrowFunction = () => {};
+const obj = new ArrowFunction();  // TypeError: ArrowFunction is not a constructor</pre>
+
+                <p><strong>Regular Function Example:</strong></p>
+                <pre>function RegularFunction() {}
+const obj = new RegularFunction();  // Works fine</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>5. <span class="highlight">Hoisting</span></h2>
+            <p><strong>Arrow functions</strong> are not hoisted, meaning they cannot be called before they are defined. <strong>Regular functions</strong> are hoisted, so they can be called before their definition in the code.</p>
+            <div class="code-container">
+                <p><strong>Arrow Function Example:</strong></p>
+                <pre>console.log(foo);  // undefined
+const foo = () => {};  // Cannot be called before declaration</pre>
+
+                <p><strong>Regular Function Example:</strong></p>
+                <pre>foo();  // Works fine
+function foo() {}</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Comparison Summary</h2>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Arrow Function</th>
+                        <th>Regular Function</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Syntax</td>
+                        <td>Shorter, no `function` keyword</td>
+                        <td>Uses `function` keyword</td>
+                    </tr>
+                    <tr>
+                        <td>`this` Binding</td>
+                        <td>Inherits from outer scope</td>
+                        <td>Has its own `this`</td>
+                    </tr>
+                    <tr>
+                        <td>`arguments` Object</td>
+                        <td>Inherits from outer scope</td>
+                        <td>Own `arguments` object</td>
+                    </tr>
+                    <tr>
+                        <td>Constructor</td>
+                        <td>Cannot be used as constructor</td>
+                        <td>Can be used with `new` keyword</td>
+                    </tr>
+                    <tr>
+                        <td>Hoisting</td>
+                        <td>Not hoisted</td>
+                        <td>Hoisted</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <p class="note">Note: Arrow functions are often used for callbacks, while regular functions are better for object methods and constructors.</p>
+    </div>
+
+</body>
+</html>

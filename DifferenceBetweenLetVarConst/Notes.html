@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>let vs var vs const in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fb;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2 {
+            color: #4A90E2;
+            text-align: center;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section h2 {
+            color: #E94E77;
+            font-size: 1.5rem;
+        }
+        pre {
+            background-color: #2e3b4e;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            overflow-x: auto;
+            white-space: nowrap;
+            margin-top: 10px;
+        }
+        .code-container {
+            padding: 10px 0;
+            background-color: #f9f9f9;
+            border-left: 4px solid #4A90E2;
+        }
+        .code-container p {
+            color: #555;
+            font-size: 1rem;
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        .comparison-table th {
+            background-color: #E94E77;
+            color: white;
+        }
+        .comparison-table td {
+            background-color: #fafafa;
+        }
+        .note {
+            font-size: 1rem;
+            color: #999;
+            margin-top: 15px;
+        }
+        .highlight {
+            color: #4A90E2;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>let vs var vs const in JavaScript</h1>
+        
+        <div class="section">
+            <h2>1. Declaration and Assignment</h2>
+            <p><strong><code>var</code></strong> is the oldest keyword to declare variables. It allows both re-declaration and re-assignment within the same scope.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>var</code>:</strong></p>
+                <pre>var x = 10;
+var x = 20;  // Re-declaration is allowed
+console.log(x);  // Output: 20</pre>
+            </div>
+            <p><strong><code>let</code></strong> was introduced in ES6 and allows re-assignment, but does not allow re-declaration in the same scope.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>let</code>:</strong></p>
+                <pre>let y = 30;
+y = 40;  // Re-assignment is allowed
+console.log(y); // Output: 40
+
+let y = 50;  // SyntaxError: Identifier 'y' has already been declared</pre>
+            </div>
+            <p><strong><code>const</code></strong> also introduced in ES6 is used for values that should not be re-assigned. It must be initialized at the time of declaration.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>const</code>:</strong></p>
+                <pre>const z = 60;
+z = 70;  // TypeError: Assignment to constant variable.</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>2. <span class="highlight">Scoping</span></h2>
+            <p><strong><code>var</code></strong> is function-scoped (or globally scoped if declared outside any function). This can sometimes cause unintentional issues with variable leakage.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>var</code>:</strong></p>
+                <pre>function example() {
+    if (true) {
+        var a = 100;  // 'a' is function-scoped
+    }
+    console.log(a);  // Output: 100
+}
+example();</pre>
+            </div>
+            <p><strong><code>let</code></strong> is block-scoped, which means it is confined to the nearest set of curly braces (`{}`), including loops and conditionals.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>let</code>:</strong></p>
+                <pre>function example() {
+    if (true) {
+        let b = 200;  // 'b' is block-scoped
+        console.log(b);  // Output: 200
+    }
+    console.log(b);  // ReferenceError: b is not defined
+}
+example();</pre>
+            </div>
+            <p><strong><code>const</code></strong> behaves the same as <code>let</code> in terms of scoping, i.e., it is also block-scoped.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>const</code>:</strong></p>
+                <pre>function example() {
+    if (true) {
+        const c = 300;  // 'c' is block-scoped
+        console.log(c);  // Output: 300
+    }
+    console.log(c);  // ReferenceError: c is not defined
+}
+example();</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>3. <span class="highlight">Hoisting</span></h2>
+            <p><strong><code>var</code></strong> declarations are hoisted to the top of their function or global scope. However, the value is set to <code>undefined</> until the actual assignment.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>var</code>:</strong></p>
+                <pre>console.log(x);  // Output: undefined (due to hoisting)
+var x = 10;</pre>
+            </div>
+            <p><strong><code>let</code></strong> and <strong><code>const</code></strong> are hoisted to the top of their block, but are placed in the <strong>temporal dead zone (TDZ)</strong> until the declaration is encountered in code. Trying to access them before declaration results in a <code>ReferenceError</code>.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>let</code>:</strong></p>
+                <pre>console.log(y);  // ReferenceError: Cannot access 'y' before initialization
+let y = 20;</pre>
+                <p><strong>Example with <code>const</code>:</strong></p>
+                <pre>console.log(z);  // ReferenceError: Cannot access 'z' before initialization
+const z = 30;</pre>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>4. <span class="highlight">Re-assignment</span></h2>
+            <p><strong><code>var</code></strong> allows re-assignment at any time.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>var</code>:</strong></p>
+                <pre>var a = 10;
+a = 20;  // Re-assignment is allowed
+console.log(a);  // Output: 20</pre>
+            </div>
+            <p><strong><code>let</code></strong> also allows re-assignment.</p>
+            <div class="code-container">
+                <p><strong>Example with <code>let</code>:</strong></p>
+                <pre>let b = 30;
+b = 40;  // Re-assignment is allowed
+console.log(b);  // Output: 40</pre>
+            </div>
+            <p><strong><code>const</code></strong> does not allow re-assignment after initialization.</p>
+            < class="code-container">
+                <p><strong>Example with <code>const</code>:</strong></p>
+                <pre>const c = 50;
+c = 60;  // TypeError: Assignment to constant variable</pre>
+</div>
+
+<div class="section">
+    <h2>5. <span class="highlight">Best Practices & Use Cases</span></h2>
+    <p><strong><code>var</code></strong> is **outdated** and should generally be avoided in modern JavaScript code due to its unpredictable scoping behavior. It is mostly used for maintaining older codebases.</p>
+    <div class="code-container">
+        <p><strong>When to use <code>var</code>:</strong></p>
+        <pre>// Legacy code or function-wide scope
+var x = 5;
+function test() {
+var x = 10;  // Scoped to the function
+console.log(x); // Output: 10
+}
+test();
+console.log(x); // Output: 5</pre>
+    </div>
+
+    <p><strong><code>let</code></strong> is a safer option when you need a variable that can change within a specific block scope, like loops or conditional blocks.</p>
+    <div class="code-container">
+        <p><strong>When to use <code>let</code>:</strong></p>
+        <pre>// When you need a block-scoped variable that can be reassigned
+let count = 0;
+if (true) {
+let count = 1;  // Block-scoped
+console.log(count); // Output: 1
+}
+console.log(count); // Output: 0</pre>
+    </div>
+
+    <p><strong><code>const</code></strong> should be used as the default choice for declaring variables whose values should not change after initialization. It helps prevent accidental reassignments, improving code reliability.</p>
+    <div class="code-container">
+        <p><strong>When to use <code>const</code>:</strong></p>
+        <pre>// For values that should remain constant
+const MAX_ITEMS = 100;
+const user = { name: "John", age: 30 };
+
+// You can modify properties of objects declared with const
+user.age = 31;
+console.log(user.age);  // Output: 31
+
+// But you cannot reassign the variable
+user = {};  // TypeError: Assignment to constant variable
+</pre>
+    </div>
+</div>
+
+<div class="section">
+    <h2>6. <span class="highlight">Comparison Summary</span></h2>
+    <table class="comparison-table">
+        <thead>
+            <tr>
+                <th>Feature</th>
+                <th><code>var</code></th>
+                <th><code>let</code></th>
+                <th><code>const</code></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Scope</td>
+                <td>Function-scoped or globally scoped</td>
+                <td>Block-scoped</td>
+                <td>Block-scoped</td>
+            </tr>
+            <tr>
+                <td>Re-declaration</td>
+                <td>Allowed in the same scope</td>
+                <td>Not allowed in the same scope</td>
+                <td>Not allowed in the same scope</td>
+            </tr>
+            <tr>
+                <td>Re-assignment</td>
+                <td>Allowed</td>
+                <td>Allowed</td>
+                <td>Not allowed</td>
+            </tr>
+            <tr>
+                <td>Hoisting</td>
+                <td>Hoisted with <code>undefined</code></td>
+                <td>Hoisted to the top but in Temporal Dead Zone (TDZ)</td>
+                <td>Hoisted to the top but in Temporal Dead Zone (TDZ)</td>
+            </tr>
+            <tr>
+                <td>Best Use Case</td>
+                <td>Legacy code, or function-wide variables</td>
+                <td>Variables that change within a block scope</td>
+                <td>Variables that should never be reassigned</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<p class="note">Note: For most modern JavaScript development, prefer <code>const</code> for declaring variables that shouldn't change, and use <code>let</code> only when re-assignment is required. Avoid <code>var</code> due to its unpredictable scoping behavior.</p>
+</div>
+
+</body>
+</html>
+
